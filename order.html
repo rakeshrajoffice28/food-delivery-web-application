@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="quick dine icon.png" type="image/png" />
+  <title>Quick Dine | Order Placed</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="order">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">QD</div>
+      <div>
+        <h1>Order Confirmed</h1>
+        <p>Thank you for choosing Quick Dine.</p>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="login.html" id="nav-account">👤 Login</a>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <button id="nav-logout" class="btn btn-outline nav-logout hidden" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main class="order-main">
+    <div class="order-card">
+      <div class="order-animation" id="order-animation">
+        <div class="order-circle"></div>
+        <div class="order-checkmark">✓</div>
+      </div>
+      <div class="order-copy">
+        <h2>Order Placed Successfully!</h2>
+        <p id="order-message">Your delicious meal is being prepared and will arrive soon.</p>
+        <p class="order-continue-note">Want to continue shopping? Use the button below to return to the home page.</p>
+      </div>
+      <div class="order-details" id="order-details"></div>
+      <div class="order-actions">
+        <a href="index.html" class="btn btn-outline">Continue Fooding</a>
+        <a href="index.html" class="btn btn-primary">Home</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-bar">
+    <p>Quick Dine Order Page | Enjoy your meal.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
