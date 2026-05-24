@@ -1,14 +1,24 @@
 const products = [
-  { id: 1, name: "Chicken Biryani", category: "Biriyani", price: 250, distance: 2, type: "Lunch", label: "Spicy classic" },
-  { id: 2, name: "Veg Biryani", category: "Biriyani", price: 220, distance: 3, type: "Lunch", label: "Aromatic veg" },
-  { id: 3, name: "Cheese Burger", category: "Fast Food", price: 180, distance: 1.5, type: "Fast Food", label: "Juicy and cheesy" },
-  { id: 4, name: "Crispy Fries", category: "Fast Food", price: 100, distance: 1, type: "Fast Food", label: "Golden crisp" },
-  { id: 5, name: "Chicken Shawarma", category: "Quick Bite", price: 200, distance: 0.8, type: "Quick Bite", label: "Wrap delight" },
-  { id: 6, name: "Mango Juice", category: "Juice", price: 120, distance: 2.4, type: "Juice", label: "Fresh and fruity" },
-  { id: 7, name: "Paneer Sandwich", category: "Quick Bite", price: 150, distance: 1.7, type: "Quick Bite", label: "Warm crunchy" },
-  { id: 8, name: "Pasta Alfredo", category: "Lunch", price: 210, distance: 2.5, type: "Lunch", label: "Creamy pasta" },
-  { id: 9, name: "Chocolate Cake", category: "Desserts", price: 140, distance: 4, type: "Desserts", label: "Sweet treat" },
-  { id: 10, name: "Berry Smoothie", category: "Juice", price: 110, distance: 2.1, type: "Juice", label: "Cool refresh" }
+  { id: 1, name: "Chicken Biryani", category: "Biriyani", price: 250, distance: 2, type: "Lunch", label: "Spicy classic", image: "images/chicken biriyani.jpg" },
+  { id: 2, name: "Veg Biryani", category: "Biriyani", price: 220, distance: 3, type: "Lunch", label: "Aromatic veg" , image:"images/veg biriyani.jpg" },
+  { id: 3, name: "Cheese Burger", category: "Fast Food", price: 180, distance: 1.5, type: "Fast Food", label: "Juicy and cheesy", image:"images/cheese burger.jpg" },
+  { id: 4, name: "Crispy Fries", category: "Fast Food", price: 100, distance: 1, type: "Fast Food", label: "Golden crisp" , image:"images/chrisp fryies.jpg"},
+  { id: 5, name: "Chicken Shawarma", category: "Quick Bite", price: 200, distance: 0.8, type: "Quick Bite", label: "Wrap delight" , image:"images/chicken shawarma.jpg" },
+  { id: 6, name: "Mango Juice", category: "Juice", price: 120, distance: 2.4, type: "Juice", label: "Fresh and fruity", image:"images/mango juice.jpg" },
+  { id: 7, name: "Paneer Sandwich", category: "Quick Bite", price: 150, distance: 1.7, type: "Quick Bite", label: "Warm crunchy", image:"images/paneer sandwich.jpg" },
+  { id: 8, name: "Pasta Alfredo", category: "Lunch", price: 210, distance: 2.5, type: "Lunch", label: "Creamy pasta", image:"images/pasta alfredo.jpg" },
+  { id: 9, name: "Chocolate Cake", category: "Desserts", price: 40, distance: 4, type: "Desserts", label: "Sweet treat", image:"images/chocolate cake.jpg" },
+  { id: 10, name: "Berry Smoothie", category: "Juice", price: 110, distance: 2.1, type: "Juice", label: "Cool refresh", image:"images/Berry Smoothie.jpg" },
+  { id: 11, name: "veg Meal", category: "Lunch", price: 100, distance: 1.5, type: "Lunch", label: "South indian treat", image:"images/veg meals.jpg" },
+  { id: 12, name: "Non-Veg Meal", category: "Lunch", price: 150, distance: 1.5, type: "Lunch", label: "South indian treat", image:"images/non-veg meals.jpg" },
+  { id: 13, name: "Parotta", category: "Lunch", price: 70, distance: 1.7, type: "Lunch", label: " indian flat-bread treat", image:"images/parotta.jpg" },
+  { id: 14, name: "Chapati", category: "Lunch", price: 50, distance: 1.7, type: "Lunch", label: " indian flat-bread treat", image:"images/chapathi.jpg" },
+  { id: 15, name: "Naan - Chicken Curry", category: "Lunch", price: 90, distance: 1.7, type: "Lunch", label: " indian flat-bread treat", image:"images/naan.jpg" },
+  { id: 16, name: "Masala-Dosa XL ", category: "Lunch", price: 120, distance: 1.7, type: "Lunch", label: " south indian treat", image:"images/masala dosa.jpg" },
+  { id: 17, name: "Choco-Brownie", category: "Desserts", price: 80, distance: 4, type: "Desserts", label: "Sweet treat" , image:"images/brownie.jpg"},
+  { id: 18, name: "Donuts -MIX", category: "Desserts", price: 140, distance: 4, type: "Desserts", label: "Sweet treat", image:"images/donut.jpg" },
+  { id: 19, name: "Chicken Fried-Rice", category: "Fast Food", price: 120, distance: 1.5, type: "Fast Food", label: "Chinese treat", image:"images/chicken fried rice.jpg" },
+  { id: 20, name: "Pizza - std", category: "Fast Food", price: 180, distance: 1.2, type: "Fast Food", label: "Italian treat", image:"images/pizza.jpg" }
 ];
 
 const storageKeys = {
@@ -228,7 +238,9 @@ function renderProducts() {
 
   productList.innerHTML = visibleProducts.map(product => `
     <article class="food-card">
-      <div class="food-card__image">Image placeholder<br /><strong>${product.name}</strong></div>
+      <div class="food-card__image">
+        ${product.image ? `<img src="${product.image}" alt="${product.name}" />` : `Image placeholder<br /><strong>${product.name}</strong>`}
+      </div>
       <div class="food-card__content">
         <p class="food-card__meta">${product.category} • ${product.type}</p>
         <h3 class="food-card__title">${product.name}</h3>
