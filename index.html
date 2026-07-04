@@ -1,97 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="quick dine icon.png" type="image/png" />
-  <title>Quick Dine | QD</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body data-page="home">
-  <header class="topbar topbar-home">
-    <div class="brand">
-      <div class="logo">QD</div>
-      <div>
-        <h1>Quick Dine</h1>
-        <p>Fast, fresh food delivery at your doorstep</p>
-      </div>
-    </div>
-    <div class="topbar-actions">
-      <div class="filter-compact">
-        <label for="filter-type">Type
-          <select id="filter-type">
-            <option value="all">All</option>
-          </select>
-        </label>
-        <label for="filter-category">Category
-          <select id="filter-category">
-            <option value="all">All</option>
-          </select>
-        </label>
-        <label for="filter-distance">Distance
-          <select id="filter-distance">
-            <option value="all">Any</option>
-            <option value="1">1 km</option>
-            <option value="2">2 km</option>
-            <option value="3">3 km</option>
-            <option value="5">5 km</option>
-          </select>
-        </label>
-        <label for="filter-price">Price
-          <input id="filter-price" type="range" min="50" max="400" step="10" value="400" />
-        </label>
-        <span id="filter-price-value">Up to ₹400</span>
-      </div>
-      <div class="search-panel">
-        <input id="search-input" type="search" placeholder="Search food, category or cuisine..." />
-        <button id="search-run" type="button" class="search-icon" aria-label="Search">Search</button>
-        <button id="search-clear" type="button" class="clear-icon" aria-label="Clear search">Clear</button>
-      </div>
-      <nav class="nav-links">
-        <a href="login.html" id="nav-account">👤 Login</a>
-        <a href="index.html" class="active">🏠 Home</a>
-        <a href="cart.html">🛒 Cart <span id="cart-badge">0</span></a>
-        <button id="nav-logout" class="btn btn-outline nav-logout hidden" type="button">Logout</button>
-      </nav>
-    </div>
-  </header>
-
-  <main class="main-grid">
-    <section class="hero-card">
-      <div class="hero-copy">
-        <p class="eyebrow">Order from your favourite kitchen</p>
-        <h2>Quick Dine makes every meal easy.</h2>
-        <p>Search by food, category, price, or distance and add items to your cart instantly.</p>
-      </div>
-    </section>
-
-    
-
-    <section class="category-card">
-      <div class="category-header">
-        <h2>Food categories</h2>
-        <p>Tap a category to narrow your search.</p>
-      </div>
-      <div class="category-grid" id="category-list">
-      </div>
-    </section>
-
-    <section class="menu-card">
-      <div class="menu-header">
-        <div>
-          <h2>Discover tasty dishes</h2>
-          <p>Choose breakfast, lunch, quick bites, dessert and juice options.</p>
-        </div>
-        <div class="menu-summary">Cart total: <span id="cart-summary">₹0</span></div>
-      </div>
-      <div class="food-grid" id="product-list"></div>
-    </section>
-  </main>
-
-  <footer class="footer-bar">
-    <p>Quick Dine (QD) | Blue & white food delivery at your service.</p>
-  </footer>
-
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
